@@ -1,0 +1,471 @@
+=== Simulating season: City 5s Premier (10 teams, double round-robin) ===
+
+MATCH: Dockside FC vs Metro Miners
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Dockside FC 3 - 1 Metro Miners
+
+MATCH: Metro Miners vs Dockside FC
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  FINAL: Metro Miners 0 - 0 Dockside FC
+
+MATCH: Dockside FC vs Northside Nets
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Dockside FC 0 - 1 Northside Nets
+
+MATCH: Northside Nets vs Dockside FC
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  FINAL: Northside Nets 1 - 0 Dockside FC
+
+MATCH: Dockside FC vs River Rovers
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Dockside FC 1 - 0 River Rovers
+
+MATCH: River Rovers vs Dockside FC
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  FINAL: River Rovers 1 - 0 Dockside FC
+
+MATCH: Dockside FC vs Kingston Knights
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Dockside FC 0 - 0 Kingston Knights
+
+MATCH: Kingston Knights vs Dockside FC
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  FINAL: Kingston Knights 1 - 0 Dockside FC
+
+MATCH: Dockside FC vs Old Town United
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Dockside FC 0 - 0 Old Town United
+
+MATCH: Old Town United vs Dockside FC
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  FINAL: Old Town United 0 - 0 Dockside FC
+
+MATCH: Dockside FC vs Station Spartans
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Dockside FC 0 - 0 Station Spartans
+
+MATCH: Station Spartans vs Dockside FC
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Station Spartans 1 - 0 Dockside FC
+
+MATCH: Dockside FC vs Lighthouse Lions
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Dockside FC 1 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Dockside FC
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Lighthouse Lions 1 - 2 Dockside FC
+
+MATCH: Dockside FC vs Cedar City
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Dockside FC 0 - 0 Cedar City
+
+MATCH: Cedar City vs Dockside FC
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  FINAL: Cedar City 0 - 0 Dockside FC
+
+MATCH: Dockside FC vs Harbour Hearts
+  Home (Atk 282, Def 300, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Dockside FC 0 - 1 Harbour Hearts
+
+MATCH: Harbour Hearts vs Dockside FC
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 282, Def 300, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Harbour Hearts 1 - 1 Dockside FC
+
+MATCH: Metro Miners vs Northside Nets
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Metro Miners 0 - 0 Northside Nets
+
+MATCH: Northside Nets vs Metro Miners
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Northside Nets 0 - 0 Metro Miners
+
+MATCH: Metro Miners vs River Rovers
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Metro Miners 1 - 0 River Rovers
+
+MATCH: River Rovers vs Metro Miners
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: River Rovers 0 - 1 Metro Miners
+
+MATCH: Metro Miners vs Kingston Knights
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Metro Miners 0 - 1 Kingston Knights
+
+MATCH: Kingston Knights vs Metro Miners
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Kingston Knights 1 - 1 Metro Miners
+
+MATCH: Metro Miners vs Old Town United
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Metro Miners 0 - 0 Old Town United
+
+MATCH: Old Town United vs Metro Miners
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Old Town United 0 - 0 Metro Miners
+
+MATCH: Metro Miners vs Station Spartans
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Metro Miners 0 - 1 Station Spartans
+
+MATCH: Station Spartans vs Metro Miners
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Station Spartans 1 - 1 Metro Miners
+
+MATCH: Metro Miners vs Lighthouse Lions
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  FINAL: Metro Miners 1 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Metro Miners
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Lighthouse Lions 0 - 0 Metro Miners
+
+MATCH: Metro Miners vs Cedar City
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Metro Miners 0 - 1 Cedar City
+
+MATCH: Cedar City vs Metro Miners
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Cedar City 1 - 1 Metro Miners
+
+MATCH: Metro Miners vs Harbour Hearts
+  Home (Atk 281, Def 297, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Metro Miners 0 - 1 Harbour Hearts
+
+MATCH: Harbour Hearts vs Metro Miners
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 281, Def 297, GK YES)
+  FINAL: Harbour Hearts 0 - 0 Metro Miners
+
+MATCH: Northside Nets vs River Rovers
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Northside Nets 0 - 0 River Rovers
+
+MATCH: River Rovers vs Northside Nets
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: River Rovers 1 - 0 Northside Nets
+
+MATCH: Northside Nets vs Kingston Knights
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Northside Nets 0 - 0 Kingston Knights
+
+MATCH: Kingston Knights vs Northside Nets
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Kingston Knights 0 - 1 Northside Nets
+
+MATCH: Northside Nets vs Old Town United
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Northside Nets 0 - 0 Old Town United
+
+MATCH: Old Town United vs Northside Nets
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Old Town United 0 - 0 Northside Nets
+
+MATCH: Northside Nets vs Station Spartans
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Northside Nets 1 - 0 Station Spartans
+
+MATCH: Station Spartans vs Northside Nets
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Station Spartans 1 - 0 Northside Nets
+
+MATCH: Northside Nets vs Lighthouse Lions
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Northside Nets 1 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Northside Nets
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Lighthouse Lions 0 - 0 Northside Nets
+
+MATCH: Northside Nets vs Cedar City
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Northside Nets 0 - 0 Cedar City
+
+MATCH: Cedar City vs Northside Nets
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Cedar City 0 - 0 Northside Nets
+
+MATCH: Northside Nets vs Harbour Hearts
+  Home (Atk 269, Def 335, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Northside Nets 0 - 0 Harbour Hearts
+
+MATCH: Harbour Hearts vs Northside Nets
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 269, Def 335, GK YES)
+  FINAL: Harbour Hearts 0 - 0 Northside Nets
+
+MATCH: River Rovers vs Kingston Knights
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: River Rovers 0 - 0 Kingston Knights
+
+MATCH: Kingston Knights vs River Rovers
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Kingston Knights 0 - 1 River Rovers
+
+MATCH: River Rovers vs Old Town United
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: River Rovers 0 - 1 Old Town United
+
+MATCH: Old Town United vs River Rovers
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Old Town United 0 - 0 River Rovers
+
+MATCH: River Rovers vs Station Spartans
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: River Rovers 1 - 0 Station Spartans
+
+MATCH: Station Spartans vs River Rovers
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Station Spartans 1 - 0 River Rovers
+
+MATCH: River Rovers vs Lighthouse Lions
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: River Rovers 1 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs River Rovers
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Lighthouse Lions 0 - 1 River Rovers
+
+MATCH: River Rovers vs Cedar City
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: River Rovers 1 - 1 Cedar City
+
+MATCH: Cedar City vs River Rovers
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Cedar City 0 - 0 River Rovers
+
+MATCH: River Rovers vs Harbour Hearts
+  Home (Atk 228, Def 356, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: River Rovers 1 - 0 Harbour Hearts
+
+MATCH: Harbour Hearts vs River Rovers
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 228, Def 356, GK YES)
+  FINAL: Harbour Hearts 0 - 0 River Rovers
+
+MATCH: Kingston Knights vs Old Town United
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Kingston Knights 1 - 0 Old Town United
+
+MATCH: Old Town United vs Kingston Knights
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Old Town United 0 - 1 Kingston Knights
+
+MATCH: Kingston Knights vs Station Spartans
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Kingston Knights 0 - 0 Station Spartans
+
+MATCH: Station Spartans vs Kingston Knights
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Station Spartans 0 - 1 Kingston Knights
+
+MATCH: Kingston Knights vs Lighthouse Lions
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Kingston Knights 1 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Kingston Knights
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Lighthouse Lions 1 - 0 Kingston Knights
+
+MATCH: Kingston Knights vs Cedar City
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Kingston Knights 0 - 1 Cedar City
+
+MATCH: Cedar City vs Kingston Knights
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Cedar City 0 - 0 Kingston Knights
+
+MATCH: Kingston Knights vs Harbour Hearts
+  Home (Atk 281, Def 315, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Kingston Knights 0 - 0 Harbour Hearts
+
+MATCH: Harbour Hearts vs Kingston Knights
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 281, Def 315, GK YES)
+  FINAL: Harbour Hearts 0 - 0 Kingston Knights
+
+MATCH: Old Town United vs Station Spartans
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Old Town United 0 - 0 Station Spartans
+
+MATCH: Station Spartans vs Old Town United
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Station Spartans 0 - 0 Old Town United
+
+MATCH: Old Town United vs Lighthouse Lions
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  FINAL: Old Town United 0 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Old Town United
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Lighthouse Lions 0 - 0 Old Town United
+
+MATCH: Old Town United vs Cedar City
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Old Town United 0 - 0 Cedar City
+
+MATCH: Cedar City vs Old Town United
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Cedar City 0 - 0 Old Town United
+
+MATCH: Old Town United vs Harbour Hearts
+  Home (Atk 231, Def 338, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Old Town United 0 - 0 Harbour Hearts
+
+MATCH: Harbour Hearts vs Old Town United
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 231, Def 338, GK YES)
+  FINAL: Harbour Hearts 0 - 0 Old Town United
+
+MATCH: Station Spartans vs Lighthouse Lions
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  FINAL: Station Spartans 0 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Station Spartans
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Lighthouse Lions 0 - 0 Station Spartans
+
+MATCH: Station Spartans vs Cedar City
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Station Spartans 0 - 0 Cedar City
+
+MATCH: Cedar City vs Station Spartans
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Cedar City 0 - 1 Station Spartans
+
+MATCH: Station Spartans vs Harbour Hearts
+  Home (Atk 247, Def 327, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Station Spartans 2 - 0 Harbour Hearts
+
+MATCH: Harbour Hearts vs Station Spartans
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 247, Def 327, GK YES)
+  FINAL: Harbour Hearts 0 - 0 Station Spartans
+
+MATCH: Lighthouse Lions vs Cedar City
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Lighthouse Lions 1 - 0 Cedar City
+
+MATCH: Cedar City vs Lighthouse Lions
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  FINAL: Cedar City 0 - 0 Lighthouse Lions
+
+MATCH: Lighthouse Lions vs Harbour Hearts
+  Home (Atk 218, Def 332, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Lighthouse Lions 0 - 1 Harbour Hearts
+
+MATCH: Harbour Hearts vs Lighthouse Lions
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 218, Def 332, GK YES)
+  Drama! Late goal swings the score.
+  FINAL: Harbour Hearts 1 - 0 Lighthouse Lions
+
+MATCH: Cedar City vs Harbour Hearts
+  Home (Atk 243, Def 316, GK YES)
+  Away (Atk 179, Def 338, GK YES)
+  FINAL: Cedar City 0 - 0 Harbour Hearts
+
+MATCH: Harbour Hearts vs Cedar City
+  Home (Atk 179, Def 338, GK YES)
+  Away (Atk 243, Def 316, GK YES)
+  FINAL: Harbour Hearts 0 - 0 Cedar City
+
+=== Season complete ===
+
+
