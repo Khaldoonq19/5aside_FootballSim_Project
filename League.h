@@ -4,6 +4,7 @@
 #include <random>
 #include <iostream>
 #include <functional>
+#include <memory>
 #include "Team.h"
 #include "Match.h"
 
@@ -35,8 +36,8 @@ public:
     void generateDefault10Teams(std::mt19937& rng);
 
     size_t teamCount() const noexcept { return m_teams.size(); }
-    const Team& getTeam(size_t i) const { return m_teams.at(i); }
-    Team& getTeam(size_t i) { return m_teams.at(i); }
+    const Team& getTeam(size_t i) const { return *m_teams.at(i); }
+    Team& getTeam(size_t i) { return *m_teams.at(i); }
 
     // Simulation style control (uses std::function internally)
     void setSimStyle(SimStyle style);
@@ -48,11 +49,11 @@ public:
     void printTeams(std::ostream& os) const;
     void printTable(std::ostream& os) const;
 
-    void addCustomPlayerToTeam(size_t teamIndex, std::unique_ptr<Player> p);
+    void addCustomPlayerToTeam(size_t teamIndex, std::shared_ptr<Player> p);
 
 private:
     std::string m_name;
-    std::vector<Team> m_teams;
+    std::vector<std::shared_ptr<Team>> m_teams;
     std::vector<TableRow> m_table;
 
     // Uses std::function to adjust goal expectancy (advanced aspect)

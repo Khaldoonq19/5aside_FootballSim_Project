@@ -5,19 +5,23 @@ Match::Match(const Team& home, const Team& away)
     : m_home(home), m_away(away) {
 }
 
-const Goalkeeper* Match::findGoalkeeper(const std::vector<const Player*>& five) const {
-    for (auto* p : five) {
-        if (auto* gk = dynamic_cast<const Goalkeeper*>(p)) { // RTTI
+std::shared_ptr<const Goalkeeper> Match::findGoalkeeper(const std::vector<std::shared_ptr<const Player>>& five) const {
+    for (const std::shared_ptr<const Player>& player : five) {
+        std::shared_ptr<const Goalkeeper> gk = std::dynamic_pointer_cast<const Goalkeeper>(player); // RTTI
+        if (gk) {
             return gk;
         }
     }
     return nullptr;
 }
 
-const OutfieldPlayer* Match::pickRandomScorer(const std::vector<const Player*>& five, std::mt19937& rng) const {
-    std::vector<const OutfieldPlayer*> outs;
-    for (auto* p : five) {
-        if (auto* op = dynamic_cast<const OutfieldPlayer*>(p)) outs.push_back(op); // RTTI
+std::shared_ptr<const OutfieldPlayer> Match::pickRandomScorer(
+    const std::vector<std::shared_ptr<const Player>>& five, std::mt19937& rng) const {
+    std::vector<std::shared_ptr<const OutfieldPlayer>> outs;
+    for (const std::shared_ptr<const Player>& player : five) {
+        std::shared_ptr<const OutfieldPlayer> outfieldPlayer =
+            std::dynamic_pointer_cast<const OutfieldPlayer>(player); // RTTI
+        if (outfieldPlayer) outs.push_back(outfieldPlayer);
     }
     if (outs.empty()) return nullptr;
 
@@ -50,11 +54,11 @@ Score Match::play(std::mt19937& rng, std::ostream& log,
     const int aAtk = m_away.attackStrength();
     const int aDef = m_away.defenseStrength();
 
-    auto hFive = m_home.selectFive();
-    auto aFive = m_away.selectFive();
+    std::vector<std::shared_ptr<const Player>> hFive = m_home.selectFive();
+    std::vector<std::shared_ptr<const Player>> aFive = m_away.selectFive();
 
-    const Goalkeeper* homeGK = findGoalkeeper(hFive);
-    const Goalkeeper* awayGK = findGoalkeeper(aFive);
+    std::shared_ptr<const Goalkeeper> homeGK = findGoalkeeper(hFive);
+    std::shared_ptr<const Goalkeeper> awayGK = findGoalkeeper(aFive);
 
     int hDefAdj = hDef + (homeGK ? 6 : -3);
     int aDefAdj = aDef + (awayGK ? 6 : -3);
@@ -67,7 +71,8 @@ Score Match::play(std::mt19937& rng, std::ostream& log,
     int awayRaw = sampleGoals(aAtk, hDefAdj, false, rng, lambdaAdjust);
 
     // NEW: Clear polymorphic behaviour output (GK saves depend on GK reflex)
-    auto computeSaves = [&](const Goalkeeper* gk, int rawGoals) -> int {
+    std::function<int(const std::shared_ptr<const Goalkeeper>&, int)> computeSaves =
+        [&](const std::shared_ptr<const Goalkeeper>& gk, int rawGoals) -> int {
         if (!gk || rawGoals <= 0) return 0;
         int maxSaves = std::min(3, rawGoals);
 
@@ -96,7 +101,7 @@ Score Match::play(std::mt19937& rng, std::ostream& log,
     if (s.home > 0) {
         log << "  Goals for " << m_home.name() << ":\n";
         for (int k = 0; k < s.home; ++k) {
-            auto* scorer = pickRandomScorer(hFive, rng);
+            std::shared_ptr<const OutfieldPlayer> scorer = pickRandomScorer(hFive, rng);
             if (scorer) {
                 log << "    - " << scorer->name() << " finishes clinically!\n";
             }
@@ -108,7 +113,7 @@ Score Match::play(std::mt19937& rng, std::ostream& log,
     if (s.away > 0) {
         log << "  Goals for " << m_away.name() << ":\n";
         for (int k = 0; k < s.away; ++k) {
-            auto* scorer = pickRandomScorer(aFive, rng);
+            std::shared_ptr<const OutfieldPlayer> scorer = pickRandomScorer(aFive, rng);
             if (scorer) {
                 log << "    - " << scorer->name() << " rifles it home!\n";
             }

@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 #include <functional>
+#include <memory>
 #include "Team.h"
 #include "Types.h"
 
@@ -25,7 +26,7 @@ private:
         std::mt19937& rng, const std::function<double(double)>& lambdaAdjust);
 
     // NEW: polymorphic commentary helpers
-    const Goalkeeper* findGoalkeeper(const std::vector<const Player*>& five) const;
-    const OutfieldPlayer* pickRandomScorer(const std::vector<const Player*>& five, std::mt19937& rng) const;
+    std::shared_ptr<const Goalkeeper> findGoalkeeper(const std::vector<std::shared_ptr<const Player>>& five) const;
+    std::shared_ptr<const OutfieldPlayer> pickRandomScorer(const std::vector<std::shared_ptr<const Player>>& five, std::mt19937& rng) const;
 };
 

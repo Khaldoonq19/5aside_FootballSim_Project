@@ -1,6 +1,7 @@
 #include "League.h"
 #include "Types.h"
 #include <algorithm>
+#include <array>
 #include <iomanip>
 
 League::League(std::string name)
@@ -32,7 +33,7 @@ static int rInt(std::mt19937& rng, int lo, int hi) {
 }
 
 static std::string randomSurname(std::mt19937& rng) {
-    static const std::vector<std::string> names = {
+    static const std::array<std::string, 20> names = {
         "Khan","Smith","Jones","Brown","Ali","Taylor","Wilson","Singh","Walker","Evans",
         "Johnson","White","Hall","Martin","Clarke","Lewis","Young","King","Wright","Scott"
     };
@@ -40,7 +41,7 @@ static std::string randomSurname(std::mt19937& rng) {
 }
 
 static std::string randomFirst(std::mt19937& rng) {
-    static const std::vector<std::string> first = {
+    static const std::array<std::string, 20> first = {
         "Alex","Sam","Jamie","Chris","Morgan","Riley","Casey","Jordan","Taylor","Avery",
         "Noah","Leo","Mason","Owen","Ethan","Mia","Zoe","Ivy","Luca","Kai"
     };
@@ -51,7 +52,7 @@ void League::generateDefault10Teams(std::mt19937& rng) {
     m_teams.clear();
     m_table.clear();
 
-    static const std::vector<std::string> teamNames = {
+    static const std::array<std::string, 10> teamNames = {
         "Arsenal",
         "Chelsea",
         "Liverpool",
@@ -65,7 +66,7 @@ void League::generateDefault10Teams(std::mt19937& rng) {
     };
 
     for (int i = 0; i < 10; ++i) {
-        Team t(teamNames[i]);
+        std::shared_ptr<Team> team = std::make_shared<Team>(teamNames[i]);
 
         // Squad (8 players): 1-2 GK + outfield
         int gkCount = rInt(rng, 1, 2);
@@ -73,7 +74,7 @@ void League::generateDefault10Teams(std::mt19937& rng) {
             std::string nm = randomFirst(rng) + " " + randomSurname(rng);
             int rating = rInt(rng, 55, 90);
             int reflex = rInt(rng, 55, 95);
-            t.addPlayer(std::make_unique<Goalkeeper>(nm, rating, reflex));
+            team->addPlayer(std::make_shared<Goalkeeper>(nm, rating, reflex));
         }
 
         for (int p = 0; p < 8 - gkCount; ++p) {
@@ -81,10 +82,10 @@ void League::generateDefault10Teams(std::mt19937& rng) {
             int rating = rInt(rng, 50, 92);
             int fin = rInt(rng, 45, 95);
             int tack = rInt(rng, 45, 95);
-            t.addPlayer(std::make_unique<OutfieldPlayer>(nm, rating, fin, tack));
+            team->addPlayer(std::make_shared<OutfieldPlayer>(nm, rating, fin, tack));
         }
 
-        m_teams.push_back(std::move(t));
+        m_teams.push_back(team);
     }
 
     initTable();
@@ -93,23 +94,23 @@ void League::generateDefault10Teams(std::mt19937& rng) {
 void League::initTable() {
     m_table.clear();
     m_table.reserve(m_teams.size());
-    for (const auto& t : m_teams) {
+    for (const std::shared_ptr<Team>& team : m_teams) {
         TableRow r;
-        r.team = t.name();
+        r.team = team->name();
         m_table.push_back(r);
     }
 }
 
 TableRow* League::findRow(const std::string& teamName) {
-    for (auto& r : m_table) {
+    for (TableRow& r : m_table) {
         if (r.team == teamName) return &r;
     }
     return nullptr;
 }
 
 void League::applyResult(const Team& home, const Team& away, const Score& s) {
-    auto* h = findRow(home.name());
-    auto* a = findRow(away.name());
+    TableRow* h = findRow(home.name());
+    TableRow* a = findRow(away.name());
     if (!h || !a) return;
 
     h->played++; a->played++;
@@ -131,9 +132,9 @@ void League::simulateRandomMatch(std::mt19937& rng, std::ostream& log) {
     int j = d(rng);
     while (j == i) j = d(rng);
 
-    Match m(m_teams[i], m_teams[j]);
+    Match m(*m_teams[i], *m_teams[j]);
     Score s = m.play(rng, log, m_goalLambdaAdjust);
-    applyResult(m_teams[i], m_teams[j], s);
+    applyResult(*m_teams[i], *m_teams[j], s);
     log << "\n";
 }
 
@@ -150,15 +151,15 @@ void League::simulateSeason(std::mt19937& rng, std::ostream& log) {
     for (size_t i = 0; i < m_teams.size(); ++i) {
         for (size_t j = i + 1; j < m_teams.size(); ++j) {
             {
-                Match m(m_teams[i], m_teams[j]);
+                Match m(*m_teams[i], *m_teams[j]);
                 Score s = m.play(rng, log, m_goalLambdaAdjust);
-                applyResult(m_teams[i], m_teams[j], s);
+                applyResult(*m_teams[i], *m_teams[j], s);
                 log << "\n";
             }
             {
-                Match m(m_teams[j], m_teams[i]);
+                Match m(*m_teams[j], *m_teams[i]);
                 Score s = m.play(rng, log, m_goalLambdaAdjust);
-                applyResult(m_teams[j], m_teams[i], s);
+                applyResult(*m_teams[j], *m_teams[i], s);
                 log << "\n";
             }
         }
@@ -170,12 +171,12 @@ void League::simulateSeason(std::mt19937& rng, std::ostream& log) {
 void League::printTeams(std::ostream& os) const {
     os << "Teams in " << m_name << ":\n";
     for (size_t i = 0; i < m_teams.size(); ++i) {
-        os << "  [" << i << "] " << m_teams[i].name() << "\n";
+        os << "  [" << i << "] " << m_teams[i]->name() << "\n";
     }
 }
 
 void League::printTable(std::ostream& os) const {
-    auto rows = m_table;
+    std::vector<TableRow> rows = m_table;
 
     // Uses operator< we overloaded in League.h
     std::sort(rows.begin(), rows.end());
@@ -186,7 +187,7 @@ void League::printTable(std::ostream& os) const {
         << " P  W  D  L  GF GA GD  Pts\n";
     os << "-----------------------------------------------\n";
 
-    for (const auto& r : rows) {
+    for (const TableRow& r : rows) {
         os << padRight(r.team, 22)
             << std::setw(2) << r.played << " "
             << std::setw(2) << r.won << " "
@@ -200,8 +201,8 @@ void League::printTable(std::ostream& os) const {
     os << "\n";
 }
 
-void League::addCustomPlayerToTeam(size_t teamIndex, std::unique_ptr<Player> p) {
+void League::addCustomPlayerToTeam(size_t teamIndex, std::shared_ptr<Player> p) {
     if (teamIndex >= m_teams.size() || !p) return;
-    m_teams[teamIndex].addPlayer(std::move(p));
+    m_teams[teamIndex]->addPlayer(std::move(p));
 }
 

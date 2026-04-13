@@ -55,7 +55,7 @@ static std::string askLine(const std::string& prompt) {
     return s;
 }
 
-static std::unique_ptr<Player> createPlayerInteractive() {
+static std::shared_ptr<Player> createPlayerInteractive() {
     std::cout << "\n=== Create Player ===\n";
     std::string name = askLine("Player name: ");
 
@@ -64,12 +64,12 @@ static std::unique_ptr<Player> createPlayerInteractive() {
 
     if (pos == 1) {
         int reflex = askInt("GK reflex (1..100): ", 1, 100);
-        return std::make_unique<Goalkeeper>(name, rating, reflex);
+        return std::make_shared<Goalkeeper>(name, rating, reflex);
     }
     else {
         int fin = askInt("Finishing (1..100): ", 1, 100);
         int tack = askInt("Tackling (1..100): ", 1, 100);
-        return std::make_unique<OutfieldPlayer>(name, rating, fin, tack);
+        return std::make_shared<OutfieldPlayer>(name, rating, fin, tack);
     }
 }
 
@@ -101,7 +101,7 @@ static void printMenu(SimStyle currentStyle) {
 
 int main() {
     // Internal time-based seed (not printed)
-    auto now = static_cast<unsigned int>(
+    unsigned int now = static_cast<unsigned int>(
         std::chrono::high_resolution_clock::now().time_since_epoch().count()
         );
     std::mt19937 rng(now);
@@ -139,7 +139,7 @@ int main() {
             league.printTeams(std::cout);
             int idx = askInt("Add player to team index: ", 0, (int)league.teamCount() - 1);
 
-            auto p = createPlayerInteractive();
+            std::shared_ptr<Player> p = createPlayerInteractive();
             std::cout << "Created: " << *p << "\n";
             league.addCustomPlayerToTeam((size_t)idx, std::move(p));
             std::cout << "Player added.\n\n";
