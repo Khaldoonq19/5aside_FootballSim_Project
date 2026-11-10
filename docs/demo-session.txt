@@ -1,0 +1,88 @@
+Welcome to the 5-a-side simulator!
+
+==============================
+  5-A-SIDE LEAGUE SIMULATOR
+==============================
+Current match style: Normal
+1) Show teams
+2) Show league table
+3) Show a team's roster
+4) Create a player and add to a team
+5) Simulate ONE random match (two random teams)
+6) Simulate FULL season (double round-robin)
+7) Save last output log to file
+8) Set simulation style (Normal/Defensive/Chaotic)
+0) Exit
+Choose an option: Teams in European 5s League:
+  [0] Arsenal
+  [1] Chelsea
+  [2] Liverpool
+  [3] Man City
+  [4] Man UTD
+  [5] Spurs
+  [6] Barcelona
+  [7] Real Madrid
+  [8] Bayern Munich
+  [9] Juventus
+==============================
+  5-A-SIDE LEAGUE SIMULATOR
+==============================
+Current match style: Normal
+1) Show teams
+2) Show league table
+3) Show a team's roster
+4) Create a player and add to a team
+5) Simulate ONE random match (two random teams)
+6) Simulate FULL season (double round-robin)
+7) Save last output log to file
+8) Set simulation style (Normal/Defensive/Chaotic)
+0) Exit
+Choose an option: === Random Match ===
+MATCH: Bayern Munich vs Barcelona
+  Home (Atk 204, Def 353, GK YES)
+  Away (Atk 270, Def 316, GK YES)
+  Goals for Barcelona:
+    - Chris Scott rifles it home!
+  FINAL: Bayern Munich 0 - 1 Barcelona
+
+==============================
+  5-A-SIDE LEAGUE SIMULATOR
+==============================
+Current match style: Normal
+1) Show teams
+2) Show league table
+3) Show a team's roster
+4) Create a player and add to a team
+5) Simulate ONE random match (two random teams)
+6) Simulate FULL season (double round-robin)
+7) Save last output log to file
+8) Set simulation style (Normal/Defensive/Chaotic)
+0) Exit
+Choose an option: TABLE: European 5s League
+Team                   P  W  D  L  GF GA GD  Pts
+-----------------------------------------------
+Barcelona              1  1  0  0  1  0   1   3
+Arsenal                0  0  0  0  0  0   0   0
+Real Madrid            0  0  0  0  0  0   0   0
+Juventus               0  0  0  0  0  0   0   0
+Spurs                  0  0  0  0  0  0   0   0
+Man UTD                0  0  0  0  0  0   0   0
+Man City               0  0  0  0  0  0   0   0
+Liverpool              0  0  0  0  0  0   0   0
+Chelsea                0  0  0  0  0  0   0   0
+Bayern Munich          1  0  0  1  0  1  -1   0
+
+==============================
+  5-A-SIDE LEAGUE SIMULATOR
+==============================
+Current match style: Normal
+1) Show teams
+2) Show league table
+3) Show a team's roster
+4) Create a player and add to a team
+5) Simulate ONE random match (two random teams)
+6) Simulate FULL season (double round-robin)
+7) Save last output log to file
+8) Set simulation style (Normal/Defensive/Chaotic)
+0) Exit
+Choose an option: Goodbye.
